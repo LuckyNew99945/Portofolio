@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+  background-color: #eae4e4;
+  grid-template-areas: "nav nav nav" "head head head" "main main main" "foot foot foot";
+  margin: 0;
+}
+
+.mainNav {
+  grid-area: nav;
+  background-color: crimson;
+  text-align: center;
+}
+
+.mainNav ul {
+  list-style-type: none;
+  display: inline;
+}
+
+.mainNav li {
+  display: inline;
+}
+
+.mainNav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 4rem;
+}
+
+.mainNav a:hover {
+  background-color: white;
+}
+
+.mainHeader {
+  grid-area: head;
+  height: 75vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.faceContainer {
+  height: 50%;
+}
+
+.faceContainer img {
+  max-height: 150%;
+  max-width: 150%;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.textContainer {
+  height: 25%;
+  line-height: 0.75;
+}
+
+.textContainer h1 {
+  font-size: 3em;
+}
+
+.textContainer span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.textContainer p {
+  font-size: 1.5rem;
+}
+
+.mainContent {
+  grid-area: main;
+
+  height: 300vh;
+}
+
+.mainFooter {
+  grid-area: foot;
+  background-color: cyan;
+}
+
+@media (max-width: 500px) {
+  body {
+    background-color: yellow;
+    grid-template-areas: "nav nav nav" "head head head" "main main main" "foot foot foot";
+  }
+
+  .mainNav {
+    grid-area: nav;
+    background-color: crimson;
+    text-align: center;
+  }
+
+  .mainNav ul {
+    list-style-type: none;
+    display: inline;
+  }
+
+  .mainNav li {
+    display: inline;
+  }
+
+  .mainNav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 15px;
+  }
+
+  .mainNav a:hover {
+    background-color: white;
+  }
+
+  .mainHeader {
+    grid-area: head;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .faceContainer {
+    height: 25%;
+  }
+
+  .faceContainer img {
+    max-height: 150%;
+    max-width: 150%;
+    border-radius: 50%;
+    border: 3px solid black;
+  }
+
+  .textContainer {
+    height: 25%;
+    line-height: 0.75;
+  }
+
+  .textContainer h1 {
+    font-size: 3em;
+  }
+
+  .textContainer span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .textContainer p {
+    font-size: 1.5rem;
+  }
+
+  .mainContent {
+    grid-area: main;
+    margin-bottom: 10vh;
+    height: 300vh;
+  }
+
+  .mainContent h1 {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .single-chart {
+    width: 55%;
+    margin-top: 20px;
+    justify-content: space-around;
+    position: relative;
+  }
+
+  .single-chart span {
+    color: #000;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 80%;
+    max-height: 250px;
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: #000;
+    stroke-width: 3.8;
+  }
+
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+
+  .circular-chart.orange .circle {
+    stroke: #ff9f00;
+  }
+
+  .circular-chart.green .circle {
+    stroke: #4cc790;
+  }
+
+  .circular-chart.blue .circle {
+    stroke: #3c9ee5;
+  }
+
+  .percentage {
+    fill: #000;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+
+  .profileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .profileContainer img {
+    max-width: 70%;
+    max-height: 70%;
+    border: 5px solid black;
+  }
+
+  .personal-data {
+    margin-top: 50px;
+    background-color: white;
+    width: 90%;
+    padding: 20px;
+    border-left: 5px solid red;
+  }
+
+  .personal-data span {
+    display: block;
+  }
+
+  .education-data {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    border-left: 5px solid green;
+  }
+
+  .education-data span {
+    display: block;
+  }
+
+  .work-data {
+    width: 90%;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-left: 5px solid blue;
+  }
+
+  .mainFooter {
+    grid-area: foot;
+    height: 30vh;
+    background-color: cyan;
+  }
+}
